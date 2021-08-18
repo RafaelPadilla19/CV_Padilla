@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .lado_izquierdo {
+  position: relative;
+  background-color: #003147;
+  padding: 40px;
+}
+.texto_perfil {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.texto_perfil .imagen_perfil {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* clip-path: circle(50%); */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.texto_perfil .imagen_perfil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.texto_perfil h2 {
+  color: #fff;
+  font-size: 1.33em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.texto_perfil h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.informacion_contacto {
+  padding-top: 40px;
+}
+.informacion_contacto--title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.95px;
+  margin-bottom: 20px;
+}
+.informacion_contacto ul {
+  position: relative;
+}
+.informacion_contacto ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.informacion_contacto ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+.informacion_contacto ul li a,.informacion_contacto ul li span {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.informacion_contacto.educacion li {
+  margin-bottom: 15px;
+}
+.informacion_contacto.educacion h5 {
+  color: #03a9f4;
+  font-weight: 500;
+}
+.informacion_contacto.educacion h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.informacion_contacto.educacion h4 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.informacion_contacto.idioma .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #081921;
+  display: block;
+  margin-top: 5px;
+}
+.informacion_contacto.idioma .porcentaje div {
+  height: 100%;
+  background-color: #03a9f4;
+}
+
+
+/* lado derecho */
+.container .lado_derecho {
+  position: relative;
+  background-color: #fff;
+  padding: 40px;
+}
+.acerca{
+  margin-bottom:50px;
+}
+.acerca:last-child {
+  margin-bottom: 0;
+}
+.acerca__title{
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.acerca__texto{
+  margin-top: 15px;
+}
+p{
+  color: #333;
+}
+
+.acerca .caja{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.acerca .caja .anio_empresa{
+  min-width: 150px;
+}
+
+.acerca .caja .anio_empresa h5{
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 500;
+}
+
+.acerca .caja .text h4{
+  text-transform: uppercase;
+  color: #2a7ada;
+  font-size: 16px;
+}
+
+.habilidades .caja{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr 20px;
+  justify-content: center;
+  align-items: center;
+}
+.habilidades .caja h4{
+  text-transform: uppercase;
+  color:#848c99;
+  font-weight: 500;
+}
+.habilidades .caja .porcentaje{
+  position: relative;
+  width: 95%;
+  height: 10px;;
+  background-color: #f0f0f0;
+}
+
+.habilidades .caja .porcentaje div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #03a9f4;
+}
+.intereses ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.intereses ul li{
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.intereses ul li .fa{
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+
+/* mobile */
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+  }
+  .intereses ul{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .acerca .caja{
+    flex-direction: column;
+  }
+  .acerca .caja .anio_empresa{
+    min-width: 150px;
+    margin-bottom: 5px;
+  }
+  .habilidades .caja{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  .intereses ul{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
